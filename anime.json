@@ -1,14 +1,14 @@
 [
   {
-    "name": "anime1",
-    "url": "example.com/1",
-    "img": "https://via.placeholder.com/150?text=anime1",
-    "ep": 1
+    "name": "Kimetsu no Yaiba",
+    "url": "https://animepahe.com/anime/kimetsu-no-yaiba",
+    "img": "https://i.animepahe.com/posters/1a3bb9ae95d72fa80f4d4202a1f799f0.jpg",
+    "ep": 13
   },
   {
-    "name": "anime2",
-    "url": "example.com/2",
-    "img": "https://via.placeholder.com/150?text=anime2",
-    "ep": 1
+    "name": "Fairy Gone",
+    "url": "https://animepahe.com/anime/fairy-gone",
+    "img": "https://i.animepahe.com/posters/dc8c4ca2cb59c14b86df016cb50cedb1a4f9b3be5889f7e423be173e1a90a67f.jpg",
+    "ep": 12
   }
 ]
