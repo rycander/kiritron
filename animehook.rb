@@ -14,15 +14,26 @@ def postPrepwork
   puts req.body
   res = https.request(req)
 
-  puts "Response #{res.code} #{res.message}: #{res.body}"
+  updateAnime
 end
 
 def getSecrets
-  readJSONFile './secrets.json'
+  readJSONFile "#{__dir__}/secrets.json"
 end
 
 def getAnime
-  readJSONFile './anime.json'
+  readJSONFile "#{__dir__}/anime.json"
+end
+
+def updateAnime
+  anime = getAnime
+  anime.each do |item|
+    item["ep"] = 1 + item["ep"]
+  end
+
+  file = File.open "#{__dir__}/anime.json", 'w'
+  file.write anime.to_json
+  file.close
 end
 
 def getBody
@@ -53,7 +64,7 @@ def getImageEmbed
 end
 
 def getTitle
-  readJSONFile './titles.txt'
+  readJSONFile "#{__dir__}/titles.txt"
 end
 
 def readJSONFile path
