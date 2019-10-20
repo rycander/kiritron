@@ -34,6 +34,12 @@ class Kiritron
     end
   end
 
+  def format
+    file = File.open "#{__dir__}/anime.json", "w"
+    file.write JSON.pretty_generate @anime 
+    file.close
+  end
+
   private
 
   def postRequest unparsedUri, body
@@ -123,6 +129,14 @@ private def  readJSONFile path
 end
 
 kt = Kiritron.new
+
+ARGV.each do |a|
+  if a == 'f'
+    kt.format
+    exit
+  end
+end 
+
 kt.requestMultiple
 kt.sendPrepwork
 
